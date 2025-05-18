@@ -1,9 +1,17 @@
-import React from 'react'
+import { useNavigate } from "react-router";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Home
+  return (
+    <div className="min-h-svh relative bg-amber-100">
+      <Navbar />      
+      <button onClick={() => navigate('/found')} className=" absolute bottom-10 left-1/2 -translate-x-1/2 bg-[#FFFDE3] px-6 py-3 border-2 border-[#C21010] font-bold rounded-xl font-montserrat">
+        Mulai
+      </button>
+    </div>
+  );
+};
+
+export default Home;
